@@ -5,8 +5,8 @@ pipeline {
       steps {
         sh '''#!/bin/bash
 cd /var/www/html/TpJenkis
-git pull origin master
-composer update
+sudo git pull origin master
+sudo composer update
 '''
       }
     }
