@@ -27,7 +27,9 @@ composer update'''
       steps {
         sh '''#!/bin/bash
 cd /var/www/html/TpJenkis
-./vendor/bin/phpunit'''
+./vendor/bin/phpunit
+php artisan cache:clear
+./vendor/bin/behat'''
       }
     }
   }
