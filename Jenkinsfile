@@ -25,9 +25,20 @@ composer update'''
     }
     stage('Test Laravel') {
       steps {
-        sh '''#!/bin/bash
+        parallel(
+          "Test Laravel": {
+            sh '''#!/bin/bash
 cd /var/www/html/TpJenkis
 ./vendor/bin/phpunit'''
+            
+          },
+          "Behat": {
+            sh '''#!/bin/bash
+cd /var/www/html/TpJenkis
+./vendor/bin/Behat'''
+            
+          }
+        )
       }
     }
   }
