@@ -6,7 +6,7 @@ pipeline {
         sh '''#!/bin/bash
 cd /var/www/html/TpJenkis
 sudo su
-sudo composer update
+composer update
 '''
       }
     }
