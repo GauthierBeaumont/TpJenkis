@@ -4,11 +4,11 @@ pipeline {
     stage('git pull') {
       steps {
         sh '''#!/bin/bash
-sudo su
-cd /var/www/html
-chmod 777 -R TpJenkis/
 
+cd /var/www/html
+sudo chmod 777 -R TpJenkis/
 cd TpJenkis
+sudo su
 git pull origin master
 '''
       }
