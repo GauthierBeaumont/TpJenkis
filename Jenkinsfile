@@ -1,10 +1,12 @@
 pipeline {
   agent any
   stages {
-    stage('test 1') {
+    stage('git pull') {
       steps {
         sh '''#!/bin/bash
-composer update'''
+cd /var/www/html/TpJenkis
+git pull origin master
+'''
       }
     }
   }
