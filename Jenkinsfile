@@ -17,5 +17,12 @@ cd /var/www/html/TpJenkis
 composer update'''
       }
     }
+    stage('Test Laravel') {
+      steps {
+        sh '''#!/bin/bash
+cd /var/www/html/TpJenkis
+./vendor/bin/phpunit'''
+      }
+    }
   }
 }
