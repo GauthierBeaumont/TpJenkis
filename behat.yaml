@@ -6,3 +6,5 @@ default:
       default_session: laravel
       base_url: http://localhost:8000
       laravel: ~
+  gherkin:
+    cache: ~
