@@ -1,9 +1,11 @@
 pipeline {
   agent any
   stages {
-    stage('Composer Update') {
+    stage('First') {
       steps {
         sh 'composer update'
+        sh 'cp .env.example .env'
+        sh 'php artisan key:generate'
       }
     }
     stage('Test Laravel') {
