@@ -4,6 +4,7 @@ pipeline {
     stage('First') {
       steps {
         sh 'composer update'
+        sh 'cp .env.example .env'
         sh 'php artisan key:generate'
       }
     }
@@ -12,6 +13,11 @@ pipeline {
         sh '''./vendor/bin/phpunit
 php artisan cache:clear
 ./vendor/bin/behat'''
+      }
+    }
+    stage('deploy') {
+      steps {
+        sh 'rocketeer deploy --host="192.168.33.10"--key=""'
       }
     }
   }
