@@ -21,4 +21,7 @@ php artisan cache:clear
       }
     }
   }
+  triggers {
+    pollSCM('* * * * *')
+  }
 }
