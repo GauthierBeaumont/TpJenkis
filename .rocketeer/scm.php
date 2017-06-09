@@ -17,8 +17,8 @@ return [
     // In other cases you can leave this empty too, and you will
     // be prompted for the credentials on deploy. If you don't want
     // to be prompted (public repo, etc) set the values to null
-    'username'   => 'gauthierbeaumont@gmail.com',
-    'password'   => '(pYG-108)',
+    'username'   => '',
+    'password'   => '',
 
     // The branch to deploy
     'branch'     => 'master',
