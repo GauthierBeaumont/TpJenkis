@@ -17,7 +17,7 @@ php artisan cache:clear
     }
     stage('deploy') {
       steps {
-        sh 'rocketeer deploy --password="6fe7b5d4f79c9ddd94b4a8f7"'
+        sh 'rocketeer deploy --password="6fe7b5d4f79c9ddd94b4a8f7" --key=""'
       }
     }
   }
