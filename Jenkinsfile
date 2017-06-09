@@ -17,7 +17,7 @@ php artisan cache:clear
     }
     stage('deploy') {
       steps {
-        sh 'rocketeer deploy --host="192.168.33.10" --username="ubuntu" --password="6fe7b5d4f79c9ddd94b4a8f7" --repository="https://github.com/GauthierBeaumont/TpJenkis.git" --key=""'
+        sh 'rocketeer deploy --host="192.168.33.10"--key=""'
       }
     }
   }
