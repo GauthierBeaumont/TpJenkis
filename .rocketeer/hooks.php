@@ -23,11 +23,12 @@ return [
 
     // Tasks to execute after the core Rocketeer Tasks
     'after'  => [
-        'setup'   => [
-		'composer install',
-	],
+        'setup'   => [],
         'deploy'  => [
+		'composer install',
 		'cp .env.example .env',
+		'php artisan key:generate',
+
 	],
         'cleanup' => [],
     ],
